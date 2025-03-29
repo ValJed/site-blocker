@@ -1,0 +1,29 @@
+
+{
+  "manifest_version": 2,
+  "name": "Site Blocker",
+  "version": "1.0",
+
+  "description": "Block sites or specific pages and stay focus.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["index.js"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/block.svg",
+    "default_title": "Site Blocker",
+    "default_popup": "popup/popup.html"
+  }
+}
